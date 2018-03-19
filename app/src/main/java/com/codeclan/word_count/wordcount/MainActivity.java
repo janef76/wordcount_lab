@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText inputText;
@@ -23,11 +25,17 @@ public class MainActivity extends AppCompatActivity {
         answerCount = findViewById(R.id.answer);
     }
 
+//    public void onButtonClick(View clickedView) {
+//        String enteredText = inputText.getText().toString();
+//        WordCount wordCount = new WordCount();
+//        int getCount = wordCount.getWordCount(enteredText);
+//        answerCount.setText("The number of words is " + getCount);
+//    }
+
     public void onButtonClick(View clickedView) {
         String enteredText = inputText.getText().toString();
         WordCount wordCount = new WordCount();
-        int getCount = wordCount.getWordCount(enteredText);
-        answerCount.setText("The number of words is " + getCount);
-
+        HashMap getCount = wordCount.getHashWordCount(enteredText);
+        answerCount.setText("Words and count values: " + getCount);
     }
 }
