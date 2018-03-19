@@ -2,17 +2,22 @@ package com.codeclan.word_count.wordcount;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
- * Created by miguelmorenobaladron on 3/19/18.
+ * Created by miguelmorenobaladron and janeflucker on 3/19/18.
  */
 
 public class WordCount {
 //    ArrayList<String> inputText;
     HashMap<String, Integer> hmap = new HashMap<String, Integer>();
+
+    Map<String, Integer> tmap = new TreeMap<String, Integer>(hmap);
 //    public WordCount(){
 //        this.inputText = new ArrayList<>();
 //    }
@@ -37,5 +42,7 @@ public class WordCount {
             }
         }
         return hmap;
+
+
     }
 }

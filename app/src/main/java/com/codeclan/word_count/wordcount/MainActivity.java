@@ -36,6 +36,6 @@ public class MainActivity extends AppCompatActivity {
         String enteredText = inputText.getText().toString();
         WordCount wordCount = new WordCount();
         HashMap getCount = wordCount.getHashWordCount(enteredText);
-        answerCount.setText("Words and count values: " + getCount);
+        answerCount.setText("" + getCount);
     }
 }
